@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisata Digital & Keberlanjutan Kampung Naga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&family=Alegreya+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Alegreya Sans', sans-serif;
+        background: radial-gradient(circle at top, #e7f0df 0%, #f4f3ef 40%, #f2efe9 100%);
+        color: #2b2b26;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .serif-heading {
+        font-family: 'Alegreya', serif;
+      }
+      .glass-nav {
+        backdrop-filter: blur(18px);
+      }
+      .pulse-indicator {
+        animation: pulse 2.2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.85;
+        }
+      }
+      .hero-image {
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+      .line-separator {
+        border-image: linear-gradient(90deg, rgba(97, 118, 77, 0.5), rgba(42, 58, 36, 1)) 1;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-stone-900">
+    <!-- Fixed navigation bar with blur background -->
+    <header class="fixed inset-x-0 top-0 z-50 glass-nav border-b border-stone-200/70 bg-white/70 shadow-sm">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
+        <a href="#home" class="flex items-center gap-3 text-stone-950">
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-900/10 text-emerald-900 ring-1 ring-emerald-900/10">
+            <i data-lucide="map-pin" class="h-5 w-5"></i>
+          </span>
+          <div>
+            <p class="text-sm uppercase tracking-[0.24em] text-stone-600">Kampung Naga</p>
+            <h1 class="serif-heading text-xl font-semibold">Wisata Digital & Keberlanjutan</h1>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-8 md:flex text-sm font-medium text-stone-800">
+          <a href="#hero" class="hover:text-emerald-800">Beranda</a>
+          <a href="#virtual" class="hover:text-emerald-800">Naga Virtual</a>
+          <a href="#booking" class="hover:text-emerald-800">Homestay</a>
+          <a href="#etiket" class="hover:text-emerald-800">Etika</a>
+          <a href="#kriya" class="hover:text-emerald-800">Kriya</a>
+        </nav>
+
+        <button id="menuToggle" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-stone-200 bg-white text-stone-900 shadow-sm md:hidden">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-stone-200/70 bg-white/95 px-4 pb-4 md:hidden">
+        <div class="space-y-3 pt-3 text-sm text-stone-800">
+          <a href="#hero" class="block rounded-2xl px-4 py-3 hover:bg-emerald-50">Beranda</a>
+          <a href="#virtual" class="block rounded-2xl px-4 py-3 hover:bg-emerald-50">Naga Virtual</a>
+          <a href="#booking" class="block rounded-2xl px-4 py-3 hover:bg-emerald-50">Homestay</a>
+          <a href="#etiket" class="block rounded-2xl px-4 py-3 hover:bg-emerald-50">Etika</a>
+          <a href="#kriya" class="block rounded-2xl px-4 py-3 hover:bg-emerald-50">Kriya</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-28">
+      <!-- Hero section with immersive village landscape -->
+      <section id="hero" class="hero-image relative overflow-hidden pb-20 pt-16">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-stone-100/60"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[1.4fr_0.9fr] lg:items-end">
+            <div class="space-y-6 py-14 text-white">
+              <span class="inline-flex rounded-full bg-emerald-900/80 px-4 py-2 text-sm uppercase tracking-[0.24em] text-emerald-100">Wisata Digital & Keberlanjutan</span>
+              <h2 class="serif-heading text-4xl font-bold leading-tight sm:text-5xl">Selami Harmoni Alam, Tradisi, dan Keberlanjutan Kampung Naga</h2>
+              <p class="max-w-2xl text-base text-stone-100/90 sm:text-lg">Platform ini menggabungkan pengalaman digital imersif, dukungan ekonomi komunitas, serta panduan etika adat agar wisatawan dan penduduk lokal tetap hidup selaras dengan Bumi Ageung.</p>
+              <div class="flex flex-wrap gap-4">
+                <a href="#virtual" class="inline-flex items-center justify-center rounded-2xl bg-emerald-100 px-6 py-3 text-sm font-semibold text-stone-950 shadow-sm transition hover:bg-emerald-200">Mulai Tur Virtual</a>
+                <a href="#booking" class="inline-flex items-center justify-center rounded-2xl border border-white/80 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/20">Pesan Homestay</a>
+              </div>
+            </div>
+
+            <!-- Live carrying capacity dashboard -->
+            <div class="rounded-[2rem] border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl">
+              <div class="flex items-center gap-4 text-stone-100">
+                <div class="rounded-3xl bg-emerald-900/90 p-4 text-emerald-50">
+                  <i data-lucide="activity" class="h-6 w-6"></i>
+                </div>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.22em] text-emerald-100/80">Sistem Kendali Daya Tampung</p>
+                  <h3 class="serif-heading text-2xl font-semibold">Live Capacity Dashboard</h3>
+                </div>
+              </div>
+              <div class="mt-8 rounded-[1.75rem] border border-white/30 bg-stone-950/80 p-8 text-center text-white shadow-xl">
+                <p class="text-sm uppercase tracking-[0.24em] text-stone-300">Pengunjung Saat Ini</p>
+                <div class="mt-4 flex items-end justify-center gap-3">
+                  <span id="liveCount" class="serif-heading text-6xl font-black">284</span>
+                  <span class="text-lg text-stone-300">/ 500</span>
+                </div>
+                <div class="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 px-4 py-3 text-sm text-stone-200">
+                  <span id="capacityIndicator" class="pulse-indicator inline-flex h-4 w-4 rounded-full bg-emerald-400 shadow-[0_0_0_8px_rgba(110,231,183,0.12)]"></span>
+                  <span id="capacityLabel">Kapasitas Aman</span>
+                </div>
+                <p class="mt-4 text-sm leading-6 text-stone-300">Dashboard real-time menjaga jumlah tamu sesuai batas agar Kampung Naga tetap lestari dan nyaman untuk semua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Naga Virtual -->
+      <section id="virtual" class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="space-y-5">
+            <span class="serif-heading text-sm uppercase tracking-[0.28em] text-emerald-800">Naga Virtual</span>
+            <h2 class="serif-heading text-3xl font-bold text-stone-950 sm:text-4xl">Aksesibilitas untuk Lansia & Disabilitas</h2>
+            <p class="max-w-2xl text-base text-stone-700/90">Nikmati pengalaman digital tanpa harus turun langsung, dengan cakupan 360° dan narasi budaya agar lebih inklusif, ramah, dan terhormat.</p>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Virtual tour card -->
+            <article class="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-lg">
+              <div class="mb-4 flex items-center gap-3">
+                <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-900">
+                  <i data-lucide="camera" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.2em] text-stone-500">Simulasi Tur Visual</p>
+                  <h3 class="serif-heading text-xl font-semibold text-stone-950">360° 444 Anak Tangga</h3>
+                </div>
+              </div>
+              <p class="text-sm leading-7 text-stone-600">Jelajahi tangga tradisional, saung-saung, dan pemandangan alam melalui mockup interaktif yang dirancang khusus untuk pengunjung yang memerlukan kenyamanan serta akses penuh.</p>
+              <div class="mt-6 overflow-hidden rounded-[1.75rem] bg-stone-100">
+                <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=900&q=80" alt="Mockup tur 360 derajat" class="h-48 w-full object-cover" />
+              </div>
+            </article>
+
+            <!-- Audio Book card -->
+            <article class="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-lg">
+              <div class="mb-4 flex items-center gap-3">
+                <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-stone-900 text-white">
+                  <i data-lucide="headphones" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <p class="text-sm uppercase tracking-[0.2em] text-stone-500">Audio Book</p>
+                  <h3 class="serif-heading text-xl font-semibold text-stone-950">Narasi Budaya Tradisional</h3>
+                </div>
+              </div>
+              <p class="text-sm leading-7 text-stone-600">Dengarkan cerita ritual Hajat Sasih dan kedaulatan agraris yang dibawakan dalam bahasa lokal dan terjemahan bilingual untuk pengalaman budaya yang mendalam.</p>
+              <div class="mt-6 flex items-center justify-between rounded-3xl bg-stone-950 p-4 text-white shadow-inner">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.24em] text-stone-300">Durasi Simulasi</p>
+                  <p class="mt-1 text-lg font-semibold">18 Menit</p>
+                </div>
+                <button id="audioToggle" type="button" class="inline-flex items-center gap-2 rounded-3xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-emerald-300">
+                  <i data-lucide="play" class="h-5 w-5"></i>
+                  <span>Putar</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking & Homestay section -->
+      <section id="booking" class="bg-stone-50 pb-24 pt-10">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+            <div class="space-y-5">
+              <span class="serif-heading text-sm uppercase tracking-[0.28em] text-emerald-800">Booking & Homestay</span>
+              <h2 class="serif-heading text-3xl font-bold text-stone-950 sm:text-4xl">Akomodasi Rumah Panggung Asli dan Pemandu Lokal</h2>
+              <p class="max-w-xl text-base text-stone-700/90">Pilih homestay tradisional dan dukung pemandu lokal bilingual yang akan membawa Anda memahami adat, ritual, serta hikmah lingkungan setempat.</p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <article class="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+                  <div class="mb-4 flex items-center justify-between">
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-emerald-800">Saung Hejo</p>
+                      <h3 class="serif-heading text-xl font-semibold text-stone-950">Rumah Panggung Hijau</h3>
+                    </div>
+                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-900">Rp 450.000 / malam</span>
+                  </div>
+                  <p class="text-sm leading-7 text-stone-600">Seni arsitektur bambu, udara sejuk, dan pemandangan lembah untuk pengalaman menginap yang tenang.</p>
+                  <div class="mt-4 flex items-center gap-3 text-sm text-stone-700">
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80" alt="Profil pemandu" class="h-11 w-11 rounded-2xl object-cover" />
+                    <div>
+                      <p class="font-semibold">Asep</p>
+                      <p class="text-stone-500">Bahasa: Indonesia / Inggris</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm">
+                  <div class="mb-4 flex items-center justify-between">
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-emerald-800">Imah Bambu</p>
+                      <h3 class="serif-heading text-xl font-semibold text-stone-950">Pelukan Bambu Tradisi</h3>
+                    </div>
+                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-900">Rp 520.000 / malam</span>
+                  </div>
+                  <p class="text-sm leading-7 text-stone-600">Kesan adat priyayi modern dengan pelayanan ramah, cocok untuk keluarga dan pelancong ramah budaya.</p>
+                  <div class="mt-4 flex items-center gap-3 text-sm text-stone-700">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Profil pemandu" class="h-11 w-11 rounded-2xl object-cover" />
+                    <div>
+                      <p class="font-semibold">Siti</p>
+                      <p class="text-stone-500">Bahasa: Sunda / Inggris</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-lg">
+                <div class="mb-6 flex items-center gap-3">
+                  <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-900">
+                    <i data-lucide="check-square" class="h-5 w-5"></i>
+                  </span>
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.22em] text-emerald-800">Form Reservasi Digital</p>
+                    <h3 class="serif-heading text-2xl font-semibold text-stone-950">Amankan Kuota Homestay</h3>
+                  </div>
+                </div>
+                <form id="reservationForm" class="space-y-5">
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <label class="block text-sm text-stone-700">
+                      Nama Lengkap
+                      <input name="name" type="text" required class="mt-2 w-full rounded-3xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-900 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100" placeholder="Contoh: Rahmawati" />
+                    </label>
+                    <label class="block text-sm text-stone-700">
+                      Jumlah Pengunjung
+                      <input id="visitorInput" name="visitors" type="number" min="1" max="10" required class="mt-2 w-full rounded-3xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-900 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100" placeholder="1-10 orang" />
+                    </label>
+                  </div>
+                  <label class="block text-sm text-stone-700">
+                    Pilih Homestay
+                    <select name="stay" required class="mt-2 w-full rounded-3xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-900 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100">
+                      <option value="Saung Hejo">Saung Hejo</option>
+                      <option value="Imah Bambu">Imah Bambu</option>
+                    </select>
+                  </label>
+                  <div class="rounded-[1.5rem] bg-emerald-50 p-4 text-sm text-stone-700">
+                    <p class="font-semibold text-emerald-900">Catatan Kuota</p>
+                    <p class="mt-2">Setiap reservasi akan memperbarui dashbord kapasitas secara langsung. Bila batas 500 terlampaui, sistem akan menolak demi menjaga kelestarian lingkungan.</p>
+                  </div>
+                  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <button type="submit" class="inline-flex w-full items-center justify-center rounded-3xl bg-emerald-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:w-auto">Kirim Reservasi</button>
+                    <p id="formMessage" class="max-w-xl text-sm text-stone-700"></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ethic guide infographics -->
+      <section id="etiket" class="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div class="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
+          <div class="grid gap-8 lg:grid-cols-[0.9fr_0.9fr] lg:items-center">
+            <div>
+              <span class="serif-heading text-sm uppercase tracking-[0.28em] text-emerald-800">Panduan Etika Adat</span>
+              <h2 class="serif-heading mt-3 text-3xl font-bold text-stone-950 sm:text-4xl">Do's & Don'ts Kampung Naga</h2>
+              <p class="mt-4 max-w-xl text-base leading-7 text-stone-700/90">Memahami tata krama lokal adalah bentuk hormat terbesar. Ikuti panduan ini untuk menjaga adat, lingkungan, dan spiritualitas bersama.</p>
+            </div>
+            <div class="space-y-4 rounded-[1.75rem] bg-stone-50 p-6 text-sm text-stone-700 shadow-inner">
+              <div class="rounded-3xl border border-emerald-100 bg-emerald-50 p-5">
+                <p class="font-semibold text-emerald-900">Do's</p>
+                <ul class="mt-3 space-y-2 list-disc pl-5 leading-7">
+                  <li>Hormati area sakral dan undang pemandu lokal saat memasuki lokasi penting.</li>
+                  <li>Pakai pakaian sopan yang menutupi bahu dan lutut.</li>
+                  <li>Dukung usaha kriya lokal dengan membeli produk buatan warga.</li>
+                </ul>
+              </div>
+              <div class="rounded-3xl border border-stone-200 bg-white p-5">
+                <p class="font-semibold text-stone-900">Don'ts</p>
+                <ul class="mt-3 space-y-2 list-disc pl-5 leading-7 text-stone-600">
+                  <li>Jangan menerbangkan drone tanpa izin dari tetua adat.</li>
+                  <li>Jangan memotret area sakral Bumi Ageung tanpa restu.</li>
+                  <li>Jangan meninggalkan sampah dan selalu gunakan tempat sampah yang disediakan.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kriya Naga e-commerce community section -->
+      <section id="kriya" class="bg-stone-50 pb-20 pt-10">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <span class="serif-heading text-sm uppercase tracking-[0.28em] text-emerald-800">Kriya Naga</span>
+            <h2 class="serif-heading mt-3 text-3xl font-bold text-stone-950 sm:text-4xl">Dukung Ekonomi Komunitas Lewat Kriya Tradisional</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-stone-700/90">Jelajahi koleksi anyaman bambu, ukiran, dan kain tenun ikat khas Kampung Naga yang dibuat tangan oleh pengrajin lokal.</p>
+          </div>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="group overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Anyaman bambu" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+              <div class="p-6">
+                <p class="text-sm uppercase tracking-[0.2em] text-emerald-800">Anyaman Bambu</p>
+                <h3 class="serif-heading mt-3 text-xl font-semibold text-stone-950">Keranjang Kearifan Lokal</h3>
+                <p class="mt-3 text-sm leading-7 text-stone-600">Dibuat oleh perempuan desa, cocok sebagai cinderamata atau dekorasi rumah.</p>
+                <div class="mt-6 flex items-center justify-between text-sm text-stone-700">
+                  <span class="font-semibold text-emerald-900">Rp 180.000</span>
+                  <button class="rounded-3xl bg-emerald-900 px-4 py-2 text-white transition hover:bg-emerald-800">Beli</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="Ukiran kayu" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+              <div class="p-6">
+                <p class="text-sm uppercase tracking-[0.2em] text-emerald-800">Ukiran</p>
+                <h3 class="serif-heading mt-3 text-xl font-semibold text-stone-950">Relief Koleksi Ritual</h3>
+                <p class="mt-3 text-sm leading-7 text-stone-600">Ukiran kayu motif adat yang menjadi simbol cerita Kampung Naga.</p>
+                <div class="mt-6 flex items-center justify-between text-sm text-stone-700">
+                  <span class="font-semibold text-emerald-900">Rp 240.000</span>
+                  <button class="rounded-3xl bg-emerald-900 px-4 py-2 text-white transition hover:bg-emerald-800">Beli</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?auto=format&fit=crop&w=900&q=80" alt="Kain tenun ikat" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" />
+              <div class="p-6">
+                <p class="text-sm uppercase tracking-[0.2em] text-emerald-800">Tenun Ikat</p>
+                <h3 class="serif-heading mt-3 text-xl font-semibold text-stone-950">Kain Tradisi Terpilih</h3>
+                <p class="mt-3 text-sm leading-7 text-stone-600">Kain tenun asli dengan pola dan warna yang terinspirasi dari alam dan ritual adat.</p>
+                <div class="mt-6 flex items-center justify-between text-sm text-stone-700">
+                  <span class="font-semibold text-emerald-900">Rp 320.000</span>
+                  <button class="rounded-3xl bg-emerald-900 px-4 py-2 text-white transition hover:bg-emerald-800">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-200 bg-white/90 py-8 text-stone-700">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+        <p class="text-sm">© 2026 Wisata Digital Kampung Naga. Platform untuk pelestarian budaya dan keadilan lingkungan.</p>
+        <p class="text-sm">Dibangun untuk komunitas yang ramah, inklusif, dan berkelanjutan.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Inisialisasi ikon Lucide setelah elemen DOM dimuat
+      window.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const audioToggle = document.getElementById('audioToggle');
+        const audioIcon = audioToggle.querySelector('i');
+        const audioLabel = audioToggle.querySelector('span');
+        const reservationForm = document.getElementById('reservationForm');
+        const visitorInput = document.getElementById('visitorInput');
+        const liveCountEl = document.getElementById('liveCount');
+        const capacityIndicator = document.getElementById('capacityIndicator');
+        const capacityLabel = document.getElementById('capacityLabel');
+        const formMessage = document.getElementById('formMessage');
+
+        let currentVisitors = 284;
+        const maxCapacity = 500;
+        const warningThreshold = 400;
+
+        // Fungsi menghitung dan memperbarui indikator kapasitas
+        function updateCapacityIndicator(total) {
+          if (total >= warningThreshold && total <= maxCapacity) {
+            capacityIndicator.className = 'pulse-indicator inline-flex h-4 w-4 rounded-full bg-amber-400 shadow-[0_0_0_8px_rgba(251,191,36,0.2)]';
+            capacityLabel.textContent = 'Kapasitas Mendekati Kritis';
+          } else if (total < warningThreshold) {
+            capacityIndicator.className = 'pulse-indicator inline-flex h-4 w-4 rounded-full bg-emerald-400 shadow-[0_0_0_8px_rgba(110,231,183,0.12)]';
+            capacityLabel.textContent = 'Kapasitas Aman';
+          } else {
+            capacityIndicator.className = 'pulse-indicator inline-flex h-4 w-4 rounded-full bg-red-500 shadow-[0_0_0_8px_rgba(248,113,113,0.2)]';
+            capacityLabel.textContent = 'Kapasitas Penuh';
+          }
+        }
+
+        // Toggle menu mobile di layar kecil
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuToggle.classList.toggle('bg-emerald-100');
+        });
+
+        // Mengubah tampilan tombol audio book saat diklik
+        audioToggle.addEventListener('click', () => {
+          const isPlaying = audioToggle.dataset.playing === 'true';
+          audioToggle.dataset.playing = String(!isPlaying);
+
+          if (!isPlaying) {
+            audioIcon.dataset.lucide = 'square';
+            audioToggle.classList.replace('bg-emerald-400', 'bg-red-500');
+            audioLabel.textContent = 'Berhenti';
+          } else {
+            audioIcon.dataset.lucide = 'play';
+            audioToggle.classList.replace('bg-red-500', 'bg-emerald-400');
+            audioLabel.textContent = 'Putar';
+          }
+          lucide.createIcons();
+        });
+
+        // Form reservasi dengan validasi capacity
+        reservationForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const requestedVisitors = parseInt(visitorInput.value, 10);
+          const newTotal = currentVisitors + requestedVisitors;
+
+          if (Number.isNaN(requestedVisitors) || requestedVisitors < 1) {
+            formMessage.textContent = 'Mohon masukkan jumlah pengunjung yang valid.';
+            formMessage.classList.add('text-red-600');
+            return;
+          }
+
+          if (newTotal > maxCapacity) {
+            alert('Kuota penuh. Reservasi dibatalkan demi menjaga kelestarian lingkungan Kampung Naga.');
+            formMessage.textContent = 'Reservasi ditolak karena kuota kapasitas melebihi batas.';
+            formMessage.classList.remove('text-emerald-900');
+            formMessage.classList.add('text-red-600');
+            return;
+          }
+
+          currentVisitors = newTotal;
+          liveCountEl.textContent = currentVisitors;
+          updateCapacityIndicator(currentVisitors);
+
+          formMessage.textContent = `Reservasi berhasil! Total pengunjung sekarang ${currentVisitors} dari ${maxCapacity}.`;
+          formMessage.classList.remove('text-red-600');
+          formMessage.classList.add('text-emerald-900');
+          reservationForm.reset();
+        });
+
+        // Inisialisasi indikator pada startup
+        updateCapacityIndicator(currentVisitors);
+      });
+    </script>
+  </body>
+</html>
